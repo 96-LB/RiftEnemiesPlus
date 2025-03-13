@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5253519281861897597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5253519281861897599}
+  - component: {fileID: 5253519281861897596}
+  m_Layer: 0
+  m_Name: ADC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5253519281861897599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5253519281861897597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5253519281861897596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5253519281861897597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb2113f37654894cbfacf15d7810add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationData:
+    _animClip: {fileID: 7400000, guid: a5f6a7062afc2df45840f604cf5ac5a7, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 2
+    _shouldIgnoreEnemyTempo: 0
+    _animationSprites:
+    - {fileID: 21300000, guid: 3716cd729d4a55844848697aa1c3c7a6, type: 3}
+    - {fileID: 21300000, guid: 184c55dc38c13a74a90e190875f20512, type: 3}
+    - {fileID: 21300000, guid: 072dd34172a87434695b6d6d51df75c1, type: 3}
+    - {fileID: 21300000, guid: 184c55dc38c13a74a90e190875f20512, type: 3}
+    - {fileID: 21300000, guid: 3716cd729d4a55844848697aa1c3c7a6, type: 3}

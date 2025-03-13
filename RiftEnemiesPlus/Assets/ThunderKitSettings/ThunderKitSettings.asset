@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9057f7f601990a4883b2cb295c4f43e, type: 3}
+  m_Name: ThunderKitSettings
+  m_EditorClassIdentifier: 
+  FirstLoad: 1
+  ShowOnStartup: 1
+  GameExecutable: RiftOfTheNecroDancer.exe
+  GamePath: C:\Program Files (x86)\Steam\steamapps\common\RiftOfTheNecroDancerOSTVolume1
+  Is64Bit: 1
+  DateTimeFormat: HH:mm:ss:fff
+  CreatedDateFormat: MMM/dd HH:mm:ss
+  ShowLogWindow: 1
+  LogPackageSourceTimings: 0
+  GenerateAssetsProject: 0
+  FixLocalDiskPackages: 0
+  ImageCachePath: Library/MarkdownImageCache
+  CachedImageCount: 0
+  CacheSize: 0
+  MarkdownOpenMode: 0
+  SelectedPipeline: {fileID: 11400000, guid: bef14b4c7f672dd4281eaf9aba2e1109, type: 2}
+  SelectedManifest: {fileID: 11400000, guid: 87b36929b4f9c33408b9be1e77d7e227, type: 2}
+  QuickAccessPipelines:
+  - {fileID: 11400000, guid: bef14b4c7f672dd4281eaf9aba2e1109, type: 2}
+  QuickAccessManifests:
+  - {fileID: 11400000, guid: 87b36929b4f9c33408b9be1e77d7e227, type: 2}
+  ImportConfiguration: {fileID: 11400000, guid: c8fbb9f00fb81474a817476cff686351, type: 2}
