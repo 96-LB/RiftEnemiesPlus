@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5253519281861897599}
   - component: {fileID: 5253519281861897596}
   m_Layer: 0
-  m_Name: ADC
+  m_Name: RedShieldSkeletonAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,8 +50,8 @@ MonoBehaviour:
     _durationInBeats: 2
     _shouldIgnoreEnemyTempo: 0
     _animationSprites:
-    - {fileID: 21300000, guid: 3716cd729d4a55844848697aa1c3c7a6, type: 3}
-    - {fileID: 21300000, guid: 184c55dc38c13a74a90e190875f20512, type: 3}
-    - {fileID: 21300000, guid: 072dd34172a87434695b6d6d51df75c1, type: 3}
-    - {fileID: 21300000, guid: 184c55dc38c13a74a90e190875f20512, type: 3}
-    - {fileID: 21300000, guid: 3716cd729d4a55844848697aa1c3c7a6, type: 3}
+    - {fileID: 21300000, guid: 72a528ceaaaffd24c9af44a0eb4197a5, type: 3}
+    - {fileID: 21300000, guid: e4c910237cc2bb44fb414d7713407d09, type: 3}
+    - {fileID: 21300000, guid: 110eeac9f1bf04742aaafb7adff41742, type: 3}
+    - {fileID: 21300000, guid: 663bf819ae543a14fb4a8bd6fd6169fd, type: 3}
+    - {fileID: 21300000, guid: ca24712c1d8e15b439b13055d32f5e47, type: 3}

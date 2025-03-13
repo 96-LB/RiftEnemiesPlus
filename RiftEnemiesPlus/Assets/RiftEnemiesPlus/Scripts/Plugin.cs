@@ -21,14 +21,16 @@ public class Plugin : BaseUnityPlugin {
         Harmony harmony = new(GUID);
         harmony.PatchAll();
         
-        Log.LogInfo($"{NAME} v{VERSION} ({GUID}) has been loaded! Have fun!");
-        foreach(var x in harmony.GetPatchedMethods()) {
-            Log.LogInfo($"Patched {x}.");
-        }
-        
         var assembly = Assembly.GetExecutingAssembly();
         var dir = Path.GetDirectoryName(assembly.Location);
         var path = Path.Combine(dir, "assetbundle.bundle");
         Assets = AssetBundle.LoadFromFile(path);
+        
+        global::Config.Initialize(Config);
+        
+        Log.LogInfo($"{NAME} v{VERSION} ({GUID}) has been loaded! Have fun!");
+        foreach(var x in harmony.GetPatchedMethods()) {
+            Log.LogInfo($"Patched {x}.");
+        }
     }
 }
