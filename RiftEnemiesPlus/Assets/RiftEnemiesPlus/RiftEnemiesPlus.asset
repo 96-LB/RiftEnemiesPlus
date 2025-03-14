@@ -31,7 +31,7 @@ MonoBehaviour:
   StagingPaths:
   - bin
   assetBundles:
-  - assetBundleName: AssetBundle.bundle
+  - assetBundleName: RiftEnemiesPlus.bundle
     assets:
     - {fileID: 102900000, guid: 6569dff1eacca8240a6e267ac55c9886, type: 3}
 --- !u!114 &11400000

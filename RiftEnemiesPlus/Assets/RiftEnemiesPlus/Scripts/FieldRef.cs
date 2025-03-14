@@ -8,12 +8,15 @@ internal class FieldRef<V> {
     
     public FieldRef(object instance, FieldInfo field) {
         this.instance = instance;
-        this.field = field;
+        this.field = field ?? throw new System.ArgumentNullException(nameof(field));
     }
     
-    public FieldRef(object instance, string name) :
-        this(instance, instance.GetType().GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)) { }
-
+    public FieldRef(object instance, string name) {
+        this.instance = instance;
+        field = instance.GetType().GetField(name, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+            ?? throw new System.ArgumentException($"Field '{name}' not found in type '{instance.GetType()}'.");
+    }
+    
     public FieldRef<V> Set(V value) {
         field.SetValue(instance, value);
         return this;

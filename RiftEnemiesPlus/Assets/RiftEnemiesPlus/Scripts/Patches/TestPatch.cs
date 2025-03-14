@@ -1,32 +1,31 @@
-using System.Reflection;
+using System.ComponentModel;
 using HarmonyLib;
 using RhythmRift.Enemies;
-using Shared.RhythmEngine;
 using UnityEngine;
 
-using P = RhythmRift.Enemies.RRSkeletonEnemy;
-
-[HarmonyPatch(typeof(P), nameof(P.OnSpawn))]
+[HarmonyPatch(typeof(RRSkeletonEnemy), "OnSpawn")]
 internal static class TestPatch {
     private static void Postfix(
+        RRSkeletonEnemy __instance,
         Animation ____animationComponent,
         ref SpriteAnimationData ____shieldedMoveAnimData,
         ref SpriteAnimationData ____extraShieldMoveAnimData
     ) {
-        if(Config.AssetSwaps.RedShields) {
-            var obj = Plugin.Assets.LoadAsset<GameObject>("RedShieldSkeletonAnim");
-            var container = obj.GetComponent<AnimationDataContainer>();
-            var data = container.animationData;
-            ____animationComponent.AddClip(data.AnimClip, data.AnimClip.name);
-            ____shieldedMoveAnimData = data;
-        }
         
-        if(Config.AssetSwaps.BlueShields) {
-            var obj = Plugin.Assets.LoadAsset<GameObject>("BlueShieldSkeletonAnim");
-            var container = obj.GetComponent<AnimationDataContainer>();
-            var data = container.animationData;
-            ____animationComponent.AddClip(data.AnimClip, data.AnimClip.name);
-            ____extraShieldMoveAnimData = data;
+        if(!__instance.GetComponent<AssetSwapper>()) {
+            var assetSwapper = __instance.gameObject.AddComponent<AssetSwapper>();
+            assetSwapper.Initialize(
+                ____shieldedMoveAnimData.Field<Sprite[]>("_animationSprites"),
+                Assets.Instance.redShieldSkeletonSprites,
+                Config.AssetSwaps.RedShields
+            );
+            
+            var assetSwapper2 = __instance.gameObject.AddComponent<AssetSwapper>();
+            assetSwapper2.Initialize(
+                ____extraShieldMoveAnimData.Field<Sprite[]>("_animationSprites"),
+                Assets.Instance.blueShieldSkeletonSprites,
+                Config.AssetSwaps.BlueShields
+            );
         }
     }
 }

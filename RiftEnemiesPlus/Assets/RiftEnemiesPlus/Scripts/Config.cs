@@ -1,3 +1,4 @@
+using System.Reflection;
 using BepInEx.Configuration;
 
 
@@ -5,6 +6,7 @@ public static class Config {
     public class ConfigGroup {
         private readonly ConfigFile config;
         private readonly string group;
+        
         public ConfigGroup(ConfigFile config, string group) {
             this.config = config;
             this.group = group;
@@ -20,15 +22,11 @@ public static class Config {
     }
 
     public static class AssetSwaps {
-        public static bool BlueShields => blueShields.Value;
-        private static ConfigEntry<bool> blueShields;
-        
-        public static bool RedShields => redShields.Value;
-        private static ConfigEntry<bool> redShields;
-
+        public static ConfigEntry<bool> BlueShields { get; private set; }
+        public static ConfigEntry<bool> RedShields { get; private set; }
         public static void Initialize(ConfigGroup config) {
-            blueShields = config.Bind("Blue Shields", true, "Convert double-shielded skeletons into blue-shielded skeletons.");
-            redShields = config.Bind("Red Shields", true, "Convert shielded skeletons into red-shielded skeletons.");
+            BlueShields = config.Bind("Blue Shields", true, "Convert double-shielded skeletons into blue-shielded skeletons.");
+            RedShields = config.Bind("Red Shields", true, "[DEBUG] Convert shielded skeletons into red-shielded skeletons.");
         }
     }
     
