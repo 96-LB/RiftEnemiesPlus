@@ -2,6 +2,7 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 
+
 public class Assets : MonoBehaviour {
     public Sprite[] redShieldSkeletonSprites;
     public Sprite[] blueShieldSkeletonSprites;

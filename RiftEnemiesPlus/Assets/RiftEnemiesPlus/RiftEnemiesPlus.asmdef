@@ -7,7 +7,7 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "Assembly-CSharp.dll",
+        "RiftOfTheNecroDancer.dll",
         "BepInEx.dll",
         "0Harmony.dll",
         "TicToc.ObjectPooling.Runtime.dll"

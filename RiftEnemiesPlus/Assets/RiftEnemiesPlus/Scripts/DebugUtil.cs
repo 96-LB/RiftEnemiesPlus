@@ -58,12 +58,14 @@ public static class DebugUtil {
     }
     
     public static void Dump(SpriteAnimationData data) {
+        // TODO: it'd be good to make DebugUtil not require a reference to the assembly
+        // consider adding a function which registers a custom formatter for a type
         Header(data);
-        Log(data.Field<float>("_beatProgressToStartOn"));
-        Log(data.Field<float>("_durationInBeats"));
-        Log(data.Field<bool>("_shouldIgnoreEnemyTempo"));
-        Dump(data.Field<AnimationClip>("_animClip").Value);
-        var sprites = data.Field<Sprite[]>("_animationSprites").Value;
+        Log(data._beatProgressToStartOn);
+        Log(data._durationInBeats);
+        Log(data._shouldIgnoreEnemyTempo);
+        Dump(data._animClip);
+        var sprites = data._animationSprites;
         Log($"{sprites.Length} sprites:");
         foreach(var x in sprites) {
             Dump(x);
