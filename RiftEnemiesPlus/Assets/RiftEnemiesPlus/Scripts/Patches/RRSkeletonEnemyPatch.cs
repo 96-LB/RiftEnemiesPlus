@@ -1,5 +1,6 @@
 using HarmonyLib;
 using RhythmRift.Enemies;
+using UnityEngine;
 
 
 [HarmonyPatch(typeof(RRSkeletonEnemy), nameof(RRSkeletonEnemy.OnSpawn))]
@@ -15,5 +16,6 @@ internal static class RRSkeletonEnemyPatch {
             Assets.Instance.blueShieldSkeletonSprites,
             Config.AssetSwaps.BlueShields
         );
+        DebugUtil.Dump(__instance.GetComponent<Animation>());
     }
 }

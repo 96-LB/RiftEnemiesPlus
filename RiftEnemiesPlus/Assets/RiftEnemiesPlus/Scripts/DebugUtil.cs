@@ -25,7 +25,7 @@ public static class DebugUtil {
             PrintAllComponents(transform.gameObject, depth + 1);
         }
         foreach(Transform child in transform) {
-            Plugin.Log.LogWarning($"{new string(' ', depth * 2)}○ {child.name}");
+            Plugin.Log.LogWarning($"{new string(' ', depth * 2)}○ {child.name} {child.localPosition} {child.localRotation.eulerAngles} {child.localScale} {child.tag} {child.gameObject.layer}");
             if(recursive) {
                 PrintAllChildren(child, depth + 1, recursive, components);
             }
@@ -93,5 +93,41 @@ public static class DebugUtil {
         Log($"pixels per unit {sprite.pixelsPerUnit}");
         Log($"packing mode {sprite.packingMode}");
         Footer(sprite);
+    }
+    
+    public static void Dump(SpriteRenderer spriteRenderer) {
+        Header(spriteRenderer);
+        if(spriteRenderer.sprite) Dump(spriteRenderer.sprite);
+        Log($"color {spriteRenderer.color}");
+        Log($"flipX {spriteRenderer.flipX}");
+        Log($"flipY {spriteRenderer.flipY}");
+        Log($"draw mode {spriteRenderer.drawMode}");
+        Log($"size {spriteRenderer.size}");
+        Log($"mask interaction {spriteRenderer.maskInteraction}");
+        Log($"sort point {spriteRenderer.spriteSortPoint}");
+        Log($"sorting layer {spriteRenderer.sortingLayerName} {spriteRenderer.sortingLayerID}");
+        Log($"sorting order {spriteRenderer.sortingOrder}");
+        Footer(spriteRenderer);
+    }
+    
+    public static void Dump(Animation animation) {
+        Header(animation);
+        if(animation.clip) Dump(animation.clip);
+        Log($"clip count {animation.GetClipCount()}");
+        foreach(AnimationState state in animation) {
+            Dump(state.clip);
+            Log($"state {state.name}");
+            Log($"length {state.length}");
+            Log($"normalized speed {state.normalizedSpeed}");
+            Log($"speed {state.speed}");
+            Log($"time {state.time}");
+            Log($"normalized time {state.normalizedTime}");
+            Log($"weight {state.weight}");
+            Log($"wrap mode {state.wrapMode}");
+        }
+        Log($"play automatically {animation.playAutomatically}");
+        Log($"animate physics {animation.animatePhysics}");
+        Log($"culling mode {animation.cullingType}");
+        Footer(animation);
     }
 }
