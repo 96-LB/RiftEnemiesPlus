@@ -154,15 +154,15 @@ MonoBehaviour:
   _statusFxParent: {fileID: 8337502352719479426}
   _heldItemParent: {fileID: 2056577784946989436}
   _monsterShadow: {fileID: 3429971013625189558}
-  _onBeatShadowSprite: {fileID: 0}
-  _halfBeatShadowSprite: {fileID: 0}
-  _otherBeatShadowSprite: {fileID: 0}
-  _defaultShadowColor: {r: 0.34, g: 0.3, b: 0.87, a: 1}
-  _vibePowerShadowColor: {r: 1, g: 0.99, b: 1, a: 1}
-  _defaultShadowShaderColor: {r: 0, g: 0, b: 0, a: 0}
-  _vibePowerShadowShaderColor: {r: 0, g: 0, b: 0, a: 0}
-  _resetAnimationClip: {fileID: 0}
-  _numFramesToMoveTowardsActionRow: 1
+  _onBeatShadowSprite: {fileID: 21300000, guid: 56ec52bec4e03f24c80d4ce3442543d7, type: 3}
+  _halfBeatShadowSprite: {fileID: 21300000, guid: da9a2820924f1bd4d891eb5b5daeda3c, type: 3}
+  _otherBeatShadowSprite: {fileID: 21300000, guid: 57fe7fc5c0f36824e8140eb8f3800c9a, type: 3}
+  _defaultShadowColor: {r: 0.336, g: 0.229, b: 0.868, a: 1}
+  _vibePowerShadowColor: {r: 1, g: 0.987, b: 0, a: 1}
+  _defaultShadowShaderColor: {r: 4, g: 4, b: 4, a: 0.62352943}
+  _vibePowerShadowShaderColor: {r: 4, g: 4, b: 4, a: 1}
+  _resetAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _numFramesToMoveTowardsActionRow: 2
   _shouldOverrideDefaultMoveCurve: 0
   _enemyMovementCurve:
     serializedVersion: 2
@@ -171,36 +171,36 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _movementAnimationData:
-    _animClip: {fileID: 0}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
+    _animClip: {fileID: 7400000, guid: ed3f30b802de98d4081b20dbc0e64751, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 2
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _shouldWrapAroundGrid: 1
-  _percentageThroughMovementToWrapAroundGrid: 0.5
-  _percentageThroughMovementToPlayGridLeavingAnimation: 0.3
+  _percentageThroughMovementToWrapAroundGrid: 0.75
+  _percentageThroughMovementToPlayGridLeavingAnimation: 0.01
   _leaveBoardOnLeftAnimationData:
-    _animClip: {fileID: 0}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
+    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _leaveBoardOnRightAnimationData:
-    _animClip: {fileID: 0}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
+    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _enterBoardOnLeftAnimationData:
-    _animClip: {fileID: 0}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
+    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _enterBoardOnRightAnimationData:
-    _animClip: {fileID: 0}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
+    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _simpleLeaveBoardOnLeftAnimationClip: {fileID: 0}
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _deathAnimationData:
-    _animClip: {fileID: 0}
+    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
     _beatProgressToStartOn: 0
     _durationInBeats: 0
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _attackAnimationData:
-    _animClip: {fileID: 0}
+    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
     _beatProgressToStartOn: 0
     _durationInBeats: 0
     _shouldIgnoreEnemyTempo: 0
@@ -264,10 +264,10 @@ MonoBehaviour:
   _defaultMatTintOverlayValue: 0
   _burningFxPositionOffset: {x: 0, y: 0, z: 0}
   _burningFxScale: {x: 1, y: 1, z: 1}
-  _portalInAnimationClip: {fileID: 0}
-  _portalOutAnimationClip: {fileID: 0}
-  _portalInRightFacingAnimationClip: {fileID: 0}
-  _portalOutRightFacingAnimationClip: {fileID: 0}
+  _portalInAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _portalOutAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _portalInRightFacingAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _portalOutRightFacingAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
   _statusFXDatas: []
   <TintOverlayShaderAnimValue>k__BackingField: 0
   <TintColorShaderAnimValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}

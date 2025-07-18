@@ -61,9 +61,9 @@ public static class DebugUtil {
         // TODO: it'd be good to make DebugUtil not require a reference to the assembly
         // consider adding a function which registers a custom formatter for a type
         Header(data);
-        Log(data._beatProgressToStartOn);
-        Log(data._durationInBeats);
-        Log(data._shouldIgnoreEnemyTempo);
+        Log($"beat progress {data._beatProgressToStartOn}");
+        Log($"duration {data._durationInBeats}");
+        Log($"should ignore tempo {data._shouldIgnoreEnemyTempo}");
         Dump(data._animClip);
         var sprites = data._animationSprites;
         Log($"{sprites.Length} sprites:");
@@ -129,5 +129,28 @@ public static class DebugUtil {
         Log($"animate physics {animation.animatePhysics}");
         Log($"culling mode {animation.cullingType}");
         Footer(animation);
+    }
+    
+    public static void Dump(RREnemy enemy) {
+        Header(enemy);
+        Dump(enemy._onBeatShadowSprite);
+        Dump(enemy._halfBeatShadowSprite);
+        Dump(enemy._otherBeatShadowSprite);
+        Log($"default shadow color {enemy._defaultShadowColor}");
+        Log($"vibe power shadow color {enemy._vibePowerShadowColor}");
+        Log($"default shadow shader color {enemy._defaultShadowShaderColor}");
+        Log($"vibe power shadow shader color {enemy._vibePowerShadowShaderColor}");
+        Dump(enemy._resetAnimationClip);
+        Log($"num frames to move towards action row {enemy._numFramesToMoveTowardsActionRow}");
+        Log($"should override default movement curve {enemy._shouldOverrideDefaultMoveCurve}");
+        Log($"movement curve {enemy._movementCurve}");
+        Dump(enemy._movementAnimationData);
+        Log($"should wrap around {enemy._shouldWrapAroundGrid}");
+        Log($"percent to move {enemy._percentageThroughMovementToWrapAroundGrid}");
+        Log($"percent to play animation {enemy._percentageThroughMovementToPlayGridLeavingAnimation}");
+        Dump(enemy._leaveBoardOnLeftAnimationData);
+        Dump(enemy._leaveBoardOnRightAnimationData);
+        Dump(enemy._enterBoardOnLeftAnimationData);
+        Dump(enemy._enterBoardOnRightAnimationData);
     }
 }

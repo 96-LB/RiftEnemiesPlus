@@ -16,6 +16,6 @@ internal static class RRSkeletonEnemyPatch {
             Assets.Instance.blueShieldSkeletonSprites,
             Config.AssetSwaps.BlueShields
         );
-        DebugUtil.Dump(__instance.GetComponent<Animation>());
+        DebugUtil.Dump(__instance);
     }
 }
