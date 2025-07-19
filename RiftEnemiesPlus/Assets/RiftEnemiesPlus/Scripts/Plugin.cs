@@ -1,3 +1,5 @@
+using System.IO;
+using System.Reflection;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -12,10 +14,10 @@ public class Plugin : BaseUnityPlugin {
     
     internal void Awake() {
         Log = Logger;
-
+        
         Harmony harmony = new(GUID);
         harmony.PatchAll();
-                
+        
         global::Config.Initialize(Config);
         Assets.Initialize();
         
@@ -23,5 +25,11 @@ public class Plugin : BaseUnityPlugin {
         foreach(var x in harmony.GetPatchedMethods()) {
             Log.LogInfo($"Patched {x}.");
         }
+    }
+}
+
+namespace DIR {
+    static class DIR {
+        public static string Dir => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
     }
 }

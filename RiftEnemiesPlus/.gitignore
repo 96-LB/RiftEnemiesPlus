@@ -475,3 +475,6 @@ ThunderKit/*
 
 # Unity Plugins
 /Assets/Plugins/*
+
+# C# Dev Kit
+.editorconfig

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe26484a2640514ba3fd984834fdabd, type: 3}
+  m_Name: Assets
+  m_EditorClassIdentifier: 
+  redShieldSkeletonSprites:
+  - {fileID: 21300000, guid: 72a528ceaaaffd24c9af44a0eb4197a5, type: 3}
+  - {fileID: 21300000, guid: e4c910237cc2bb44fb414d7713407d09, type: 3}
+  - {fileID: 21300000, guid: 110eeac9f1bf04742aaafb7adff41742, type: 3}
+  - {fileID: 21300000, guid: 663bf819ae543a14fb4a8bd6fd6169fd, type: 3}
+  - {fileID: 21300000, guid: ca24712c1d8e15b439b13055d32f5e47, type: 3}
+  blueShieldSkeletonSprites:
+  - {fileID: 21300000, guid: 765e31980fb1d2840be3f20541555a97, type: 3}
+  - {fileID: 21300000, guid: d9c0211cbe0506b4095b9a3d938a1b86, type: 3}
+  - {fileID: 21300000, guid: a5641452590e4954880d3b72bc61ca4e, type: 3}
+  - {fileID: 21300000, guid: 61b491021efaf5044a7994adb69d979a, type: 3}
+  - {fileID: 21300000, guid: 9d1b2c1ab40d7094f827db89c2e2ad41, type: 3}
+  enemies:
+  - {fileID: 11400000, guid: 4eecc2927f4609d4bb6dc7035781df17, type: 2}
+  - {fileID: 11400000, guid: 9a729e94b82067f49b3a03a75e96ac6f, type: 2}
+  enemy: {fileID: 11400000, guid: 9a729e94b82067f49b3a03a75e96ac6f, type: 2}

@@ -44,12 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb2113f37654894cbfacf15d7810add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationData:
-    _animClip: {fileID: 0}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
-    _shouldIgnoreEnemyTempo: 0
-    _animationSprites: []
   redShieldSkeletonSprites:
   - {fileID: 21300000, guid: 72a528ceaaaffd24c9af44a0eb4197a5, type: 3}
   - {fileID: 21300000, guid: e4c910237cc2bb44fb414d7713407d09, type: 3}
@@ -62,3 +56,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a5641452590e4954880d3b72bc61ca4e, type: 3}
   - {fileID: 21300000, guid: 61b491021efaf5044a7994adb69d979a, type: 3}
   - {fileID: 21300000, guid: 9d1b2c1ab40d7094f827db89c2e2ad41, type: 3}
+  enemies:
+  - id: 96181234
+    name: Red Shielded Skeleton
+    hits:
+    - delay: 0.75
+      offset: 0
+  - id: 96184321
+    name: Red Double Shielded Skeleton
+    hits:
+    - delay: 0.75
+      offset: 0
+    - delay: 0.75
+      offset: 0
+  - id: 96180000
+    name: King Slime
+    hits: []

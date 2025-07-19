@@ -10,7 +10,9 @@
         "RiftOfTheNecroDancer.dll",
         "BepInEx.dll",
         "0Harmony.dll",
-        "TicToc.ObjectPooling.Runtime.dll"
+        "TicToc.ObjectPooling.Runtime.dll",
+        "!Unity.Addressables.dll",
+        "!Unity.ResourceManager.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],

@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/RiftEnemiesPlus/Scenes/Scene.unity
+    guid: bb01846b51ac27a40937be30924795c0
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 37ff0de816bb7724eb50ba6247fe84ea, type: 2}
