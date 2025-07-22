@@ -1,10 +1,10 @@
 {
     "name": "RiftEnemiesPlus",
-    "rootNamespace": "",
+    "rootNamespace": "RiftEnemiesPlus",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
+    "allowUnsafeCode": true,
     "overrideReferences": true,
     "precompiledReferences": [
         "RiftOfTheNecroDancer.dll",

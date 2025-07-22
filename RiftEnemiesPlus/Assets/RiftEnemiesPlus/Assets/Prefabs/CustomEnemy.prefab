@@ -131,7 +131,10 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: ed3f30b802de98d4081b20dbc0e64751, type: 2}
+  - {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  - {fileID: 7400000, guid: a5f6a7062afc2df45840f604cf5ac5a7, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -166,7 +169,25 @@ MonoBehaviour:
   _shouldOverrideDefaultMoveCurve: 0
   _enemyMovementCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -175,7 +196,12 @@ MonoBehaviour:
     _beatProgressToStartOn: -1
     _durationInBeats: 2
     _shouldIgnoreEnemyTempo: 0
-    _animationSprites: []
+    _animationSprites:
+    - {fileID: 21300000, guid: 765e31980fb1d2840be3f20541555a97, type: 3}
+    - {fileID: 21300000, guid: d9c0211cbe0506b4095b9a3d938a1b86, type: 3}
+    - {fileID: 21300000, guid: a5641452590e4954880d3b72bc61ca4e, type: 3}
+    - {fileID: 21300000, guid: 61b491021efaf5044a7994adb69d979a, type: 3}
+    - {fileID: 21300000, guid: 9d1b2c1ab40d7094f827db89c2e2ad41, type: 3}
   _shouldWrapAroundGrid: 1
   _percentageThroughMovementToWrapAroundGrid: 0.75
   _percentageThroughMovementToPlayGridLeavingAnimation: 0.01
