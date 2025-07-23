@@ -65,7 +65,7 @@ namespace RiftEnemiesPlus {
             Log($"beat progress {data._beatProgressToStartOn}");
             Log($"duration {data._durationInBeats}");
             Log($"should ignore tempo {data._shouldIgnoreEnemyTempo}");
-            Dump(data._animClip);
+            if(data._animClip != null) Dump(data._animClip);
             var sprites = data._animationSprites;
             Log($"{sprites.Length} sprites:");
             foreach(var x in sprites) {
@@ -73,7 +73,7 @@ namespace RiftEnemiesPlus {
             }
             Footer(data);
         }
-        
+
         public static void Dump(AnimationClip clip) {
             Header(clip);
             Log($"wrap mode {clip.wrapMode}");
@@ -131,6 +131,15 @@ namespace RiftEnemiesPlus {
             Log($"culling mode {animation.cullingType}");
             Footer(animation);
         }
+
+        public static void Dump(AnimationCurve curve) {
+            Header(curve);
+            Log($"length {curve.length}");
+            foreach(var key in curve.keys) {
+                Log($"key time {key.time} value {key.value} in tangent {key.inTangent} out tangent {key.outTangent} in weight {key.inWeight} out weight {key.outWeight} mode {key.weightedMode}");
+            }
+            Footer(curve);
+        }
         
         public static void Dump(RREnemy enemy) {
             Header(enemy);
@@ -144,7 +153,8 @@ namespace RiftEnemiesPlus {
             Dump(enemy._resetAnimationClip);
             Log($"num frames to move towards action row {enemy._numFramesToMoveTowardsActionRow}");
             Log($"should override default movement curve {enemy._shouldOverrideDefaultMoveCurve}");
-            Log($"movement curve {enemy._movementCurve}");
+            Log($"movement curve");
+            if(enemy._movementCurve != null) Dump(enemy._movementCurve);
             Dump(enemy._movementAnimationData);
             Log($"should wrap around {enemy._shouldWrapAroundGrid}");
             Log($"percent to move {enemy._percentageThroughMovementToWrapAroundGrid}");
@@ -153,6 +163,34 @@ namespace RiftEnemiesPlus {
             Dump(enemy._leaveBoardOnRightAnimationData);
             Dump(enemy._enterBoardOnLeftAnimationData);
             Dump(enemy._enterBoardOnRightAnimationData);
+            Dump(enemy._simpleLeaveBoardOnLeftAnimationClip);
+            Dump(enemy._simpleLeaveBoardOnRightAnimationClip);
+            Dump(enemy._simpleEnterBoardOnLeftAnimationClip);
+            Dump(enemy._simpleEnterBoardOnRightAnimationClip);
+            Log($"should flip {enemy._shouldFlipEnemyOnBeat}");
+            foreach(var x in enemy._rendererOffsetPairs) {
+                Log($"renderer {x.RendererToOffset} offset {x.Offset}");
+            }
+            Log($"base position offset {enemy._basePositionOffset}");
+            Log($"z offset curve");
+            if(enemy._zOffsetDistanceScaleCurve != null) Dump(enemy._zOffsetDistanceScaleCurve);
+            Dump(enemy._deathAnimationData);
+            Dump(enemy._attackAnimationData);
+            Log($"death duration {enemy._deathDurationInBeats}");
+            Log($"hit move curve");
+            if(enemy._hitMoveCurve != null) Dump(enemy._hitMoveCurve);
+            Dump(enemy._hitMovementAnimationData);
+            foreach(var x in enemy._healthIndicatorObjects) {
+                Log($"health indicator {x._indicatorObject} {x._healthToActivateAt}");
+            }
+            Log($"mat tint value {enemy._defaultMatTintValue}");
+            Log($"mat tint overlay value {enemy._defaultMatTintOverlayValue}");
+            Log($"burning fx offset {enemy._burningFxPositionOffset}");
+            Log($"burning fx scale {enemy._burningFxScale}");
+            Dump(enemy._portalInAnimationClip);
+            Dump(enemy._portalOutAnimationClip);
+            Dump(enemy._portalInRightFacingAnimationClip);
+            Dump(enemy._portalOutRightFacingAnimationClip);
         }
     }
 }

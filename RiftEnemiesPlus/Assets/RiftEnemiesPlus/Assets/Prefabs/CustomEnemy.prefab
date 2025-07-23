@@ -132,9 +132,12 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: ed3f30b802de98d4081b20dbc0e64751, type: 2}
   - {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
-  - {fileID: 7400000, guid: a5f6a7062afc2df45840f604cf5ac5a7, type: 2}
+  - {fileID: 7400000, guid: ed3f30b802de98d4081b20dbc0e64751, type: 2}
+  - {fileID: 7400000, guid: 5d73ac8ec219fb64ca3f2063253a4f24, type: 2}
+  - {fileID: 7400000, guid: ac7c90e7cf9a8634e842301c8d8b22ab, type: 2}
+  - {fileID: 7400000, guid: 010cc7493730de04aa073d9b4010ed7d, type: 2}
+  - {fileID: 7400000, guid: f604b74042a0cf94f8c7dfda8ed871af, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -229,35 +232,75 @@ MonoBehaviour:
     _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
-  _simpleLeaveBoardOnLeftAnimationClip: {fileID: 0}
-  _simpleLeaveBoardOnRightAnimationClip: {fileID: 0}
-  _simpleEnterBoardOnLeftAnimationClip: {fileID: 0}
-  _simpleEnterBoardOnRightAnimationClip: {fileID: 0}
+  _simpleLeaveBoardOnLeftAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _simpleLeaveBoardOnRightAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _simpleEnterBoardOnLeftAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _simpleEnterBoardOnRightAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
   _shouldFlipEnemyOnBeat: 0
-  _rendererOffsetPairs: []
-  _basePositionOffset: {x: 0, y: 0, z: -0.2}
+  _rendererOffsetPairs:
+  - RendererToOffset: {fileID: 9056044737892268670}
+    Offset: 0
+  _basePositionOffset: {x: 0, y: 0.22, z: 0}
   _zOffsetDistanceScaleCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   _deathAnimationData:
-    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
-    _shouldIgnoreEnemyTempo: 0
-    _animationSprites: []
+    _animClip: {fileID: 7400000, guid: ac7c90e7cf9a8634e842301c8d8b22ab, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 0.5
+    _shouldIgnoreEnemyTempo: 1
+    _animationSprites:
+    - {fileID: 21300000, guid: 57fe7fc5c0f36824e8140eb8f3800c9a, type: 3}
   _attackAnimationData:
-    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
-    _beatProgressToStartOn: 0
-    _durationInBeats: 0
-    _shouldIgnoreEnemyTempo: 0
-    _animationSprites: []
+    _animClip: {fileID: 7400000, guid: 5d73ac8ec219fb64ca3f2063253a4f24, type: 2}
+    _beatProgressToStartOn: -1
+    _durationInBeats: 0.5
+    _shouldIgnoreEnemyTempo: 1
+    _animationSprites:
+    - {fileID: 21300000, guid: 72a528ceaaaffd24c9af44a0eb4197a5, type: 3}
   _deathDurationInBeats: 0.5
   _hitMoveCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -288,10 +331,10 @@ MonoBehaviour:
       Data4: 0
   _defaultMatTintValue: {r: 1, g: 1, b: 1, a: 1}
   _defaultMatTintOverlayValue: 0
-  _burningFxPositionOffset: {x: 0, y: 0, z: 0}
-  _burningFxScale: {x: 1, y: 1, z: 1}
-  _portalInAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
-  _portalOutAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+  _burningFxPositionOffset: {x: 0.05, y: -0.1, z: 0}
+  _burningFxScale: {x: 0.8, y: 1.25, z: 1}
+  _portalInAnimationClip: {fileID: 7400000, guid: 010cc7493730de04aa073d9b4010ed7d, type: 2}
+  _portalOutAnimationClip: {fileID: 7400000, guid: f604b74042a0cf94f8c7dfda8ed871af, type: 2}
   _portalInRightFacingAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
   _portalOutRightFacingAnimationClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
   _statusFXDatas: []
