@@ -4,13 +4,14 @@ using UnityEngine.AddressableAssets;
 
 
 namespace RiftEnemiesPlus {
-    [CreateAssetMenu(fileName = "RRCustomEnemyDefinition", menuName = "RiftEnemiesPlus/RRCustomEnemyDefinition")]
-    public class RRCustomEnemyDefinition : ScriptableObject {
+    [CreateAssetMenu(fileName = "CustomEnemyDefinition", menuName = "RiftEnemiesPlus/EnemyDefinition")]
+    public class CustomEnemyDefinition : ScriptableObject {
         public int id;
         public string displayName;
-        public HitData[] hits;
         public AssetReference prefabAssetReference;
-        
+        public HitData[] hits;
+        public CustomAnimation deathAnimation;
+
         public int MaxHealth => hits?.Length ?? 0;
 
         public RREnemyDefinition GetDefinition(RREnemyDatabase database) => new(id, database) {

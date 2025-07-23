@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9b5c63f3ffdd840a785f6ceb713d89, type: 3}
   m_Name: KingSlimeHit
   m_EditorClassIdentifier: 
-  delay: 1
-  offset: 0
-  sprites: []
+  delay: 2
+  offset: 1
+  animation: {fileID: 11400000, guid: 93eca696a1723f246b2ebb115cd391b1, type: 2}

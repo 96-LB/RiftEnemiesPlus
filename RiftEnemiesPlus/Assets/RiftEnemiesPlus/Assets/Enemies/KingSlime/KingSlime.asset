@@ -16,6 +16,13 @@ MonoBehaviour:
   displayName: King Slime
   hits:
   - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
+  - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
+  - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
+  - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
+  - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
+  - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
+  - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
+  - {fileID: 11400000, guid: c532f65be68abef4e99567ccb53566cc, type: 2}
   prefabAssetReference:
     m_AssetGUID: 4ac6e3d5467303f4bbf6f6be1a940300
     m_SubObjectName: 

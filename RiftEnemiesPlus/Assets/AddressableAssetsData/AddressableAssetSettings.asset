@@ -58,7 +58,7 @@ MonoBehaviour:
       - m_Id: 624b159e69e33b24483353103ea2f2c2
         m_Value: bin
       - m_Id: 69cebb3e3fd34434a8d00a8ee507d3ed
-        m_Value: '{global::Plugin.AssemblyDir}'
+        m_Value: '{RiftEnemiesPlus.Plugin.AssemblyDir}'
       - m_Id: 035cf88719514364cb9de1bf751a3581
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: 1e887fb3ff7f75640b5372add5771fea

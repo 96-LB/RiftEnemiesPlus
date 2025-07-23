@@ -9,9 +9,9 @@ namespace RiftEnemiesPlus {
     public class Assets : MonoBehaviour {
         public Sprite[] redShieldSkeletonSprites;
         public Sprite[] blueShieldSkeletonSprites;
-        public RRCustomEnemyDefinition[] enemies;
+        public CustomEnemyDefinition[] enemies;
         
-        internal static AssetsObj Instance { get; private set; }
+        internal static CustomAssets Instance { get; private set; }
         internal static AssetBundle Bundle { get; private set; }
         
         public static void Initialize() {
@@ -23,7 +23,7 @@ namespace RiftEnemiesPlus {
             var bundlePath = Path.Combine(Plugin.AssemblyDir, $"{Plugin.NAME}.bundle");
             Bundle = AssetBundle.LoadFromFile(bundlePath);
             
-            Instance = Bundle.LoadAsset<AssetsObj>("Assets.asset");
+            Instance = Bundle.LoadAsset<CustomAssets>("Assets.asset");
             if(!Instance) {
                 Plugin.Log.LogFatal("Failed to initialize assets!");
                 return;
