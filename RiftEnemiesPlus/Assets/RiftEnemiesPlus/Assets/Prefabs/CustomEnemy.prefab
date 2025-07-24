@@ -205,25 +205,25 @@ MonoBehaviour:
   _percentageThroughMovementToWrapAroundGrid: 0.75
   _percentageThroughMovementToPlayGridLeavingAnimation: 0.01
   _leaveBoardOnLeftAnimationData:
-    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _animClip: {fileID: 7400000, guid: f604b74042a0cf94f8c7dfda8ed871af, type: 2}
     _beatProgressToStartOn: -1
     _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _leaveBoardOnRightAnimationData:
-    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _animClip: {fileID: 7400000, guid: f604b74042a0cf94f8c7dfda8ed871af, type: 2}
     _beatProgressToStartOn: -1
     _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _enterBoardOnLeftAnimationData:
-    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _animClip: {fileID: 7400000, guid: 010cc7493730de04aa073d9b4010ed7d, type: 2}
     _beatProgressToStartOn: -1
     _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0
     _animationSprites: []
   _enterBoardOnRightAnimationData:
-    _animClip: {fileID: 7400000, guid: 0c6a907386ed4824a8bd54a1b73ce310, type: 2}
+    _animClip: {fileID: 7400000, guid: 010cc7493730de04aa073d9b4010ed7d, type: 2}
     _beatProgressToStartOn: -1
     _durationInBeats: 0.3
     _shouldIgnoreEnemyTempo: 0

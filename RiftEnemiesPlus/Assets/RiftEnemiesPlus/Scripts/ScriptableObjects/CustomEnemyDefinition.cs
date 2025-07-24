@@ -20,5 +20,12 @@ namespace RiftEnemiesPlus {
             _totalHitsAddedToStage = MaxHealth,
             _prefabAssetReference = prefabAssetReference
         };
+
+        public HitData GetHit(int num) {
+            if(hits == null || num < 0 || num >= hits.Length || hits[num] == null) {
+                return CreateInstance<HitData>();
+            }
+            return hits[num];
+        }
     }
 }

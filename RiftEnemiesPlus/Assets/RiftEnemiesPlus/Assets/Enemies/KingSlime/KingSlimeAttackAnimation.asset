@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e956eb5ee3f377409c2560da8039daa, type: 3}
+  m_Name: KingSlimeAttackAnimation
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 72a528ceaaaffd24c9af44a0eb4197a5, type: 3}
+  - {fileID: 21300000, guid: e4c910237cc2bb44fb414d7713407d09, type: 3}
+  - {fileID: 21300000, guid: 110eeac9f1bf04742aaafb7adff41742, type: 3}
+  - {fileID: 21300000, guid: 663bf819ae543a14fb4a8bd6fd6169fd, type: 3}
+  - {fileID: 21300000, guid: ca24712c1d8e15b439b13055d32f5e47, type: 3}
+  - {fileID: 21300000, guid: 663bf819ae543a14fb4a8bd6fd6169fd, type: 3}
+  - {fileID: 21300000, guid: 110eeac9f1bf04742aaafb7adff41742, type: 3}
+  - {fileID: 21300000, guid: e4c910237cc2bb44fb414d7713407d09, type: 3}
+  spriteTimings:
+  - 0.033333335
+  - 0.033333335
+  - 0.033333335
+  - 0.033333335
+  - 0.033333335
+  - 0.033333335
+  - 0.033333335
+  - 0.033333335
+  loop: 1

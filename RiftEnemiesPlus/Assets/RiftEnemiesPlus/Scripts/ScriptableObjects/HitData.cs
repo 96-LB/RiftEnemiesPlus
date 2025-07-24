@@ -6,6 +6,8 @@ namespace RiftEnemiesPlus {
     public class HitData : ScriptableObject {
         public float delay;
         public int offset;
-        public CustomAnimation animation;
+        public CustomAnimation movementAnimation;
+        public CustomAnimation attackAnimation;
+        public float animationSpeed = 1f;
     }
 }

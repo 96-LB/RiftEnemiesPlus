@@ -7,17 +7,20 @@ namespace RiftEnemiesPlus {
     public class CustomAnimation : ScriptableObject {
         public Sprite[] sprites;
         public float[] spriteTimings;
-
+        public bool loop = true;
         public float Duration => spriteTimings?.Sum() ?? 0f;
 
         public Sprite GetSpriteAtTime(float time) {
             if(sprites == null || spriteTimings == null) {
-                Plugin.Log.LogError("CustomAnimation sprites or timings are null!");
+                Plugin.Log.LogError("Animation sprites or timings are null!");
                 return null;
             }
 
+            if(loop) {
+                time %= Duration;
+            }
+
             Sprite sprite = null;
-            time %= Duration;
             for(int i = 0; i < Mathf.Min(sprites.Length, spriteTimings.Length); i++) {
                 if(time <= 0) {
                     return sprite;
